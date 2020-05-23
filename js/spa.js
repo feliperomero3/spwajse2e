@@ -10,7 +10,7 @@
 
 // Module /spa/
 // Provides chat slider capability
-var spa = (function ($) {
+var spa = (function () {
   // Module scope variables
   var
     // Set constants
@@ -51,10 +51,10 @@ var spa = (function ($) {
 
   // Event handler /onClickSlider/
   // receives click event and calls toggleSlider
-  onClickSlider = function (event) {
+  onClickSlider = function () {
     toggleSlider();
     return false;
-  }
+  };
 
   // Public method /initModule/
   // sets initial state and provides feature
