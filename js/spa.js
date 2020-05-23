@@ -1,16 +1,9 @@
-/*jslint
-    browser : true, continue    : true,
-    devel   : true, indent      : 2,    maxerr   : 50,
-    newcap  : true, nomen       : true, plusplus : true,
-    regexp  : true, sloppy      : true, vars     : true,
-    white   : true
-*/
-
 /*global jQuery */
 
 // Module /spa/
 // Provides chat slider capability
 var spa = (function () {
+  'use strict';
   // Module scope variables
   var
     // Set constants
@@ -38,7 +31,7 @@ var spa = (function () {
       return true;
     }
     // Retract slider if fully extended
-    else if (slider_height === configMap.extended_height) {
+    if (slider_height === configMap.extended_height) {
       $chatSlider
         .animate({ height: configMap.retracted_height })
         .attr('title', configMap.retracted_title);
@@ -78,5 +71,8 @@ var spa = (function () {
 
 // Start SPA once DOM is ready
 jQuery(document).ready(
-  function () { spa.initModule(jQuery('#spa')); }
+  function () {
+    'use strict';
+    spa.initModule(jQuery('#spa'));
+  }
 );
